@@ -1,0 +1,38 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		double eixoX, eixoY;
+		
+		System.out.println("Qual o valor do ponto no eixo X");
+		eixoX = sc.nextDouble();
+		
+		System.out.println("Qual o valor do ponto no eixo Y");
+		eixoY = sc.nextDouble();
+		
+		if (eixoX > 0 && eixoY > 0 || eixoX >= 0 && eixoY > 0 || eixoX > 0 && eixoY >= 0) {
+			System.out.println("O ponto está no primeiro quadrante");
+		}
+		else if (eixoX < 0 && eixoY >= 0) {
+			System.out.println("O ponto está no segundo quadrante");
+		}
+		else if (eixoX < 0 && eixoY < 0 || eixoX <= 0 && eixoY < 0 || eixoX < 0 && eixoY <= 0) {
+			System.out.println("O ponto está no terceiro quadrante");
+		}
+		else if (eixoX >= 0 && eixoY < 0) {
+			System.out.println("O ponto está no quarto quadrante");
+		}
+		else {
+			System.out.println("O ponto está no ponto de origem");
+		}
+		
+		sc.close();
+	}
+
+}

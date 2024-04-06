@@ -1,0 +1,41 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		double renda, total;
+		int taxa;
+		
+		System.out.println("Qual a sua renda?");
+		renda = sc.nextDouble();
+		
+		if (renda <= 2000.00) {
+			taxa = 0;
+		}
+		else if (renda >= 2000.01 && renda <= 3000.00) {
+			taxa = 8;
+		}
+		else if (renda >= 3000.01 && renda <= 4500.00) {
+			taxa = 18;
+		}
+		else {
+			taxa = 28;
+		}
+		
+		if (taxa == 0) {
+			System.out.println("Isento");
+		}
+		
+		else {
+			total = (taxa / 100) * renda;
+			System.out.printf("O desconto será de R$ %.2f%n", total);
+		}
+		
+		sc.close();
+	}
+}
