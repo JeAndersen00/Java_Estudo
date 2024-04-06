@@ -47,6 +47,7 @@ public class Program {
         System.out.println("Account data: ");
         System.out.println("Account " + numConta + " ,Holder " + nome + " ,Balance: $ " + conta.getSaldo());
         
+        // Teste de diff 2
         System.out.println("");
         System.out.println("Enter a deposit value: ");
         double valorDeposito = sc.nextDouble();
